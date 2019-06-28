@@ -1,0 +1,17 @@
+pipeline
+{
+	agent any
+	{
+		stages
+		{
+			stage('build')
+			{
+				echo " building the project"
+			}
+			stage('input')
+			{
+				input("are you ok?")
+			}
+		}
+	}
+}
