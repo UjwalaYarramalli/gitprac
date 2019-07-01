@@ -1,17 +1,22 @@
 pipeline
 {
 	agent any
+	stages
 	{
-		stages
+		stage('build')
 		{
-			stage('build')
+			steps
 			{
 				echo " building the project"
 			}
-			stage('input')
+		}
+		stage('input')
+		{
+			steps
 			{
 				input("are you ok?")
 			}
 		}
+
 	}
 }
